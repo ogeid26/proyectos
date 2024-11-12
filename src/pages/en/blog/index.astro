@@ -1,10 +1,10 @@
 ---
 import { changeLanguage } from "i18next";
-import Base from "../../layouts/Base.astro";
+import Base from "../../../layouts/Base.astro";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+import FormattedDate from "../../../components/FormattedDate.astro";
 
-changeLanguage("es");
+changeLanguage("en");
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 const title = "Blog";

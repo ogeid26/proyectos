@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -10,11 +9,13 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import vercel from "@astrojs/vercel/static";
 import icon from "astro-icon";
 import opengraphImages, { presets } from "astro-opengraph-images";
+import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://astrofolio-astro.vercel.app",
   integrations: [
+    astroI18next(),
     mdx({
       image: {
         domains: ["unsplash.com"],
@@ -44,7 +45,7 @@ export default defineConfig({
       gfm: true,
     }),
     sitemap(),
-    tailwind(),
+
     react({
       experimentalReactChildren: true,
     }),
@@ -66,9 +67,7 @@ export default defineConfig({
             name: "Roboto",
             weight: 400,
             style: "normal",
-            data: fs.readFileSync(
-              "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff"
-            ),
+            
           },
         ],
       },

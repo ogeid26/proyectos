@@ -1,0 +1,36 @@
+---
+import { getLangFromUrl, changeLanguage} from 'src/i18n/utils';
+import { languages } from '../i18n/ui';
+
+
+const lang = getLangFromUrl(Astro.url);
+
+function handleLanguageChange(event) {
+  const newLang = event.target.value;
+  const currentPath = Astro.url.pathname.replace(`/${lang}`, '');
+  changeLanguage(newLang);
+  window.location.href = `/${newLang}${currentPath}`;
+}
+---
+<ul>
+  {Object.entries(languages).map(([lang, label]) => (
+    <li>
+      <a href={`/${lang}/`}>{label}</a>
+    </li>
+  ))}
+</ul>
+
+
+
+
+<style>
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px; /* Adjust the gap as needed */
+    }
+    li {
+      display: inline;
+    }
+  </style>

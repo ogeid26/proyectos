@@ -1,10 +1,10 @@
 ---
 import { changeLanguage } from "i18next";
 import { type CollectionEntry, getCollection } from "astro:content";
-import Base from "../../layouts/Base.astro";
-import FormattedDate from "../../components/FormattedDate.astro";
+import Base from "../../../layouts/Base.astro";
+import FormattedDate from "../../../components/FormattedDate.astro";
 import "katex/dist/katex.min.css";
-import { metaData } from "../../config";
+import { metaData } from "../../../config";
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
     return posts.map((post) => ({
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 import { getImagePath } from "astro-opengraph-images";
 
-changeLanguage("es");
+changeLanguage("en");
 
 const post = Astro.props;
 const { url, site } = Astro;

@@ -1,0 +1,40 @@
+---
+
+import { Image } from "astro:assets";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import Base from "src/layouts/Base.astro";
+import { socialLinks } from "src/config";
+
+changeLanguage("es");
+---
+
+<Base>
+  <html lang={i18next.language}>
+  <section>
+    <a href={socialLinks.twitter} target="_blank">
+      <Image
+        src="/profile.png"
+        alt="Profile photo"
+        class="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+        width={160}
+        height={160}
+      />
+    </a>
+
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">
+      Todos mis proyectos, ordenados en una sola página.
+    </h1>
+
+    <div class="prose prose-neutral dark:prose-invert">
+      <p>
+        Siempre que hago un proyecto, y quiero compartirlo con el mundo, tengo que ingresarlo varias veces en diferentes plataformas, con nombres ligeramente distintos, o a veces más cortos porque la plataforma no permite textos muy largos, o sin fotos porque no podía subirlas... Para ahorrarme el tiempo de hacer eso, aquí están todos los proyectos en los que he participado, orgenados, en, así es, una sola tarjeta. Acompáñame verlos.
+      </p>
+
+     
+     
+    
+    </div>
+  </section>
+  </html>
+</Base<meta http-equiv="refresh" content="0;url=/en/" />>

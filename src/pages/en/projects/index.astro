@@ -1,15 +1,8 @@
 ---
 import { changeLanguage } from "i18next";
-import Base from "../../layouts/Base.astro";
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import Base from "../../../layouts/Base.astro";
 
-changeLanguage("es");
-
-
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
-const title = t('projects')
-
+changeLanguage("en");
 
 const projects = [
     {
@@ -31,12 +24,13 @@ const projects = [
         url: "https://example.com/",
     },
 ];
+const title = "Projects";
 const description = "My Projects";
 ---
 
 <Base title={title} description={description}>
   <section>
-    <h1 class="mb-8 text-2xl font-medium tracking-tight">{title}</h1>
+    <h1 class="mb-8 text-2xl font-medium tracking-tight">Projects</h1>
     <div class="space-y-6">
       {
         projects.map((project, index) => (
