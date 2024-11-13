@@ -1,0 +1,53 @@
+---
+import {getLangFromUrl, useTranslations} from "../i18n/utils";
+const { project, showButtonLeft: showButtonLeft = false, showButtonRight: showButtonRight = false } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+---
+
+
+<a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block group hover:opacity-80 transition-opacity duration-200">
+    <div class="flex flex-col">
+        <div class="w-full flex justify-between items-baseline">
+      <span class="text-black dark:text-white font-medium tracking-tight">
+        {project.title}
+      </span>
+            <span class="text-neutral-600 dark:text-neutral-400 tabular-nums text-sm">
+        {project.year}
+      </span>
+        </div>
+        <p class="prose prose-neutral dark:prose-invert pt-3">
+            {project.description}
+        </p>
+
+        <div class="flex space-x-2 pt-3">
+            {showButtonLeft && <button class="btn border-2 ">{t('repoUrl')}</button>}
+            {showButtonRight && <button class="btn">{t("projectUrl")}</button>}
+        </div>
+    </div>
+</a>
+
+<style>
+    .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #f3f4f6;
+        color: #1c1c1c;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        border: 2px solid #f3f4f6;
+        transition: all 0.2s;
+    }
+
+    .btn:hover {
+        background-color: #e5e7eb;
+        border-color: #e5e7eb;
+    }
+</style>
