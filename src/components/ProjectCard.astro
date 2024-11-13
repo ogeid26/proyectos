@@ -1,18 +1,23 @@
 ---
 import {getLangFromUrl, useTranslations} from "../i18n/utils";
-const { project, showButtonLeft: showButtonLeft = false, showButtonRight: showButtonRight = false } = Astro.props;
+import ImageGrid from "./mdx/ImageGrid.astro";
+const {
+    project,
+    images = []
+} = Astro.props;
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
-
+const columns = images.length == 2 ? 2: 3;
 ---
 
 
-<a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block group hover:opacity-80 transition-opacity duration-200">
+<!--<a-->
+<!--        href={project.url}-->
+<!--        target="_blank"-->
+<!--        rel="noopener noreferrer"-->
+<!--        class="block group hover:opacity-80 transition-opacity duration-200"-->
+<!--&gt;-->
     <div class="flex flex-col">
         <div class="w-full flex justify-between items-baseline">
       <span class="text-black dark:text-white font-medium tracking-tight">
@@ -27,11 +32,25 @@ const t = useTranslations(lang)
         </p>
 
         <div class="flex space-x-2 pt-3">
-            {showButtonLeft && <button class="btn border-2 ">{t('repoUrl')}</button>}
-            {showButtonRight && <button class="btn">{t("projectUrl")}</button>}
+            {project.repoUrl &&(
+                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                        <button class="btn border-2 ">{t('repoUrl')}</button>
+                    </a>
+                )}
+            {project.projectUrl &&(
+                    <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
+                        <button class="btn">{t("projectUrl")}</button>
+                    </a>
+            )}
         </div>
+        {images.length > 0 && (
+            <div class="pt-3">
+                <ImageGrid  images={images} columns={columns}/>
+                </div>
+        )}
     </div>
-</a>
+<!--</a>-->
+
 
 <style>
     .btn {

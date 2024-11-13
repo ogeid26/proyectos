@@ -11,12 +11,18 @@ export const languages = {
       'nav.projects': 'Projects',
       'nav.twitter': 'Twitter',
       'title': "My projects and prototypes",
-      'projects': 'My Projects and Prorotypes'
+      'projects': 'My Projects and Prorotypes',
+      'repoUrl': "Code",
+      'projectUrl': "Project"
+
     },
     es: {
       'nav.home': 'Inicio',
       'nav.projects': 'Proyectos',
       'title': 'Mis proyectos y prototipos',
-      'projects': "Mis proyectos y prototipos"
+      'projects': "Mis proyectos y prototipos",
+      'repoUrl': "Código",
+      'projectUrl': "Proyecto"
+
     },
   } as const;
