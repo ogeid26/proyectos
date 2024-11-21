@@ -1,7 +1,7 @@
 ---
 import { changeLanguage } from "i18next";
 import Base from "../../../layouts/Base.astro";
-import ProjectCard from "../../../components/ProjectCard.astro";
+import   ProjectCard from "../../../components/ProjectCard.astro";
 
 
 
@@ -9,10 +9,41 @@ changeLanguage("es");
 
 
 const projects = [
+  {
+    title: "MiConejo",
+    year: "Noviembre 2024",
+    description: "Aplicación para Android dedicada a brindarle cuidados a tu conejito.",
+    repoUrl: "https://github.com/ogeid26/miconejo",
+    // images:[
+    //     {
+    //     src: "/photos/photo1.jpg",
+    //     alt: "Roman columns",
+    // }]
+
+  },
+  {
+    title: "TelgoPlane ",
+    year: "Octubre 2024",
+    description: "Plandeador propulsado por servomotores y una placa ESP32. Escrito en C.",
+    repoUrl: "https://github.com/ogeid26/grupaso-repo"
+  },
+  {
+    title: "Séptimo Piso Landing Page",
+    year: "Agosto 2023",
+    description: "Ptimera página web de la Productora Séptimo Piso.",
+    repoUrl: ""
+  },
+
+  {
+    title: "IP Detector",
+    year: "Junio 2023",
+    description: "Herramienta sencilla para detectar tu IP.",
+    repoUrl: "https://github.com/ogeid26/ip-detector"
+  },
 
   {
     title: "ogeid.stats",
-    year: "Septiembre 2021",
+    year: "Mayo 2023",
     description: "Trabajo de ciencia de datos sobre data del Gobierno del Perú. Puedes encontrar gráficos sobre, por ejemplo, las tendencias en uso del internet a nivel rural y urbano en el Perú.",
     repoUrl: "https://ogeid26.github.io/blog/",
   },
@@ -23,9 +54,9 @@ const projects = [
     repoUrl: "https://github.com/ogeid26/dotfiles"
   },
   {
-    title: "Digitalizacion de apuntes de lógica",
+    title: "Apuntes de lógica",
     year:  "Septiembre 2019",
-    description: "Disponible en LaTeX. Texto original de la Gustavo Bitocchi, de la materia Lógica de la Universidad Austral.",
+    description: "Digitalización de apuntes de lógica. Disponible en LaTeX. Texto original de Gustavo Bitocchi (1999), de la materia Lógica de la Universidad Austral.",
     repoUrl: "https://github.com/ogeid26/logica"
   },
 
