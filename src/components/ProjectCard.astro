@@ -9,6 +9,8 @@ const {
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const columns = images.length == 2 ? 2: 3;
+
+const techStack = t('techUsed')
 ---
 
 
@@ -30,6 +32,11 @@ const columns = images.length == 2 ? 2: 3;
         <p class="prose prose-neutral dark:prose-invert pt-3">
             {project.description}
         </p>
+        {project.techStack && (
+                <p class="prose prose-neutral dark:prose-invert pt-1 font-bold">
+                    {techStack}: {project.techStack.join(", ")}
+                </p>
+        )}
 
         <div class="flex space-x-2 pt-3">
             {project.repoUrl &&(

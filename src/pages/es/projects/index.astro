@@ -14,31 +14,47 @@ const projects = [
     year: "Noviembre 2024",
     description: "Aplicación para Android dedicada a brindarle cuidados a tu conejito.",
     repoUrl: "https://github.com/ogeid26/miconejo",
-    // images:[
-    //     {
-    //     src: "/photos/photo1.jpg",
-    //     alt: "Roman columns",
-    // }]
-
+    techStack: ["Kotlin", "Android", "JetPack Compose"]
   },
   {
-    title: "TelgoPlane ",
+    title: "TelgoPlane",
     year: "Octubre 2024",
-    description: "Plandeador propulsado por servomotores y una placa ESP32. Escrito en C.",
+    description: "Plandeador propulsado por servomotores y una placa ESP32.",
+    techStack: ["C++", "Arduino"],
     repoUrl: "https://github.com/ogeid26/grupaso-repo"
   },
   {
     title: "Séptimo Piso Landing Page",
     year: "Agosto 2023",
-    description: "Ptimera página web de la Productora Séptimo Piso.",
-    repoUrl: ""
+    description: "Ptimera página web de la productora Séptimo Piso.",
+    techStack: ["HTML", "CSS", "Astro"],
+    repoUrl: "https://github.com/ogeid26/7p-reup",
+    images: [
+      {
+        src: "/photos/7p-1.png",
+        alt: "Septimo Piso landing page"
+      },
+
+    ]
   },
 
   {
     title: "IP Detector",
     year: "Junio 2023",
     description: "Herramienta sencilla para detectar tu IP.",
-    repoUrl: "https://github.com/ogeid26/ip-detector"
+    repoUrl: "https://github.com/ogeid26/ip-detector",
+    projectUrl: "https://ogeid-ip-finder.netlify.app/",
+    techStack:["HTML", "CSS", "JavaScript"],
+    images: [
+      {
+        src: "/photos/ogeid-ip1.png",
+        alt: "Roman columns"
+      },
+      {
+        src: "/photos/ogeid-ip2.png",
+        alt: "Roman columns"
+      }
+    ]
   },
 
   {
@@ -46,12 +62,34 @@ const projects = [
     year: "Mayo 2023",
     description: "Trabajo de ciencia de datos sobre data del Gobierno del Perú. Puedes encontrar gráficos sobre, por ejemplo, las tendencias en uso del internet a nivel rural y urbano en el Perú.",
     repoUrl: "https://ogeid26.github.io/blog/",
+    techStack: ["R", "ggplot2", "dplyr"],
+    images: [
+      {
+        src: "/photos/ogeid-web1.png",
+        alt: "Roman columns"
+      },
+      {
+        src: "/photos/ogeid-web2.png",
+        alt: "Roman columns"
+      }
+    ]
   },
   {
     title: "Dotfiles",
     year: "Mayo 2020",
-    description: "Mis archivos de configuración de Linux.",
-    repoUrl: "https://github.com/ogeid26/dotfiles"
+    description: "Mis archivos de configuración de Linux. Incluye configuraciones para Vim, zsh, tmux, y más.",
+    repoUrl: "https://github.com/ogeid26/dotfiles",
+    techStack: ["Shellscript", "Ubuntu"],
+    images: [
+      {
+        src: "/photos/dotfiles-1.png",
+        alt: "Roman columns"
+      },
+      {
+        src: "/photos/dotfiles-2.png",
+        alt: "Roman columns"
+      }
+    ]
   },
   {
     title: "Apuntes de lógica",
@@ -64,7 +102,15 @@ const projects = [
       title: "Space Invaders",
       year: "Noviembre 2018",
       description: "Implementación del clásico juego Space Invaders en Java.",
-      repoUrl: "https://github.com/ogeid26/Space-Invaders"
+      repoUrl: "https://github.com/ogeid26/Space-Invaders",
+    techStack: ["Java"],
+      images: [{
+        src: "/photos/space-invaders-1.jpg",
+        alt: "Roman columns"
+      }
+
+      ]
+
   },
 ];
 const title = "Projects";

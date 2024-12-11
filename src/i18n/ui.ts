@@ -11,9 +11,10 @@ export const languages = {
       'nav.projects': 'Projects',
       'nav.twitter': 'Twitter',
       'title': "My projects and prototypes",
-      'projects': 'My Projects and Prorotypes',
+      'projects': 'My Projects and Prototypes',
       'repoUrl': "Code",
-      'projectUrl': "Project"
+      'projectUrl': "Project",
+      'techUsed': "Tech used"
 
     },
     es: {
@@ -22,7 +23,8 @@ export const languages = {
       'title': 'Mis proyectos y prototipos',
       'projects': "Mis proyectos y prototipos",
       'repoUrl': "Código",
-      'projectUrl': "Proyecto"
+      'projectUrl': "Proyecto",
+      'techUsed': "Tecnologías"
 
     },
   } as const;

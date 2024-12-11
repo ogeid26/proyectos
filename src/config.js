@@ -1,6 +1,6 @@
 export const metaData = {
   baseUrl: "https://astrofolio-astro.vercel.app/",
-  title: "mis proyectos y prototipos",
+  title: "ogeid.projects",
   name: "Diego",
   ogImage: "/opengraph-image.png",
   description:
